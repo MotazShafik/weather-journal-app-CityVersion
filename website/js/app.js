@@ -1,7 +1,3 @@
-import dotenv from "dotenv"
-
-dotenv.config();
-
 // function to handle the loading screen for the website
 window.onload = () => {
     document.querySelector('.loading').style.display = 'none';
@@ -18,7 +14,8 @@ const content = document.getElementById("content");
 
 
 // Personal API Key for OpenWeatherMap API
-const apiKey = API_KEY;
+const apiKey = "&appid=f2aa883b9efae6562e4a8749740fb2ba"; // Free APIKEY for the openwather API
+
 // const apiBaseUrl = "https://api.openweathermap.org/data/2.5/weather?units=metric&zip="; // zip code
 const apiBaseUrl = "https://api.openweathermap.org/data/2.5/weather?units=metric&q=";
 
@@ -64,7 +61,6 @@ function getWeatherAPI() {
 
 /* Function to GET Web API Data*/
 async function OpenWeatherMapAPI(apiBaseUrl, cityName, apiKey) {
-    console.log(apiBaseUrl + cityName + apiKey);
     const response = await fetch(apiBaseUrl + cityName + apiKey);
     const data = await response.json();
     console.log(data);
@@ -107,8 +103,7 @@ function updateGUI(weatherData) {
     content.innerHTML = weatherData.content;
     document.body.style.backgroundImage = `url(https://source.unsplash.com/1600x900/?${weatherData.city})`;
     document.getElementById("tempIcon").src = `http://openweathermap.org/img/wn/${weatherData.icon}@4x.png`;
-    // document.getElementById("countryFlag").src = `https://flagcdn.com/256x192/${weatherData.country.toLowerCase()}.png`;
-    document.getElementById("countryFlag").src = `https://flagcdn.com/${weatherData.country.toLowerCase()}.svg`;
+    document.getElementById("countryFlag").src = `https://www.countryflags.io/${weatherData.country}/flat/64.png`;
     document.getElementById("city").innerHTML = weatherData.city;
     document.querySelector(".entry").style.display = "flex";
     document.querySelector(".entry").scrollIntoView({ behavior: "smooth", block: "center", inline: "center" });
