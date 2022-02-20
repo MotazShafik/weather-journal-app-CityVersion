@@ -15,9 +15,10 @@
 
 ## Summary
 weather-journal-app-CityVersion that I built as part of Udacity's Front End Web Development Professional Nanodegree Program.
-It demonestrat my understanding of JavaScript, HTML, and CSS , NodeJs and express.
 
-This app will provide with you the weather status for the city you provide
+It demonestrat my understanding of JavaScript, HTML,CSS , NodeJs and express.
+
+This app will provide you the weather status for the city you are inquiring about.
 
 ## Technologies
 
