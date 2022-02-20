@@ -1,0 +1,275 @@
+* {
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 5px;
+    justify-content: center;
+    text-shadow: #FC0 1px 0 10px;
+}
+
+body {
+    background-image: url('https://source.unsplash.com/1600x900/?landscape,nature,water');
+    background-color: #008CBA;
+    min-height: 500px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Raleway', sans-serif;
+}
+
+.loading {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    top: 0;
+    left: 0;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: gray;
+    z-index: 10;
+    transition-duration: 0.5s;
+}
+
+.loading .loadingIconLogo {
+    border-radius: 100%;
+    background-color: #008CBA;
+    box-shadow: #FC0 1px 0 15px;
+    animation: scale 2s ease-in-out infinite alternate-reverse;
+}
+
+.loadingText1,
+.loadingText2 {
+    background-color: #008bba2f;
+    font-size: 3em;
+    text-shadow: #FC0 10px 1 20px;
+    box-shadow: #FC0 1px 0 15px;
+    animation: border 5s ease-in-out infinite alternate-reverse;
+}
+
+@keyframes border {
+    0% {
+        background-color: #008bba88;
+        border-radius: 70px;
+        left: 0%;
+    }
+    100% {
+        border-radius: 5px;
+        border: 10px #FC0;
+    }
+}
+
+@keyframes scale {
+    0% {
+        border: 10px #FC0;
+        transform: rotate(0deg);
+        left: 0px;
+    }
+    25% {
+        transform: rotate(20deg);
+        left: 0px;
+    }
+    50% {
+        transform: rotate(0deg);
+        left: 500px;
+    }
+    70% {
+        transform: rotate(-20deg);
+        left: 500px;
+    }
+    100% {
+        transform: rotate(-360deg);
+        left: 0px;
+        background-color: #008bba88;
+    }
+}
+
+#app {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    transition: ease 2s all;
+    min-width: 60vh;
+    width: 60%;
+    min-height: 80vh;
+    /* height: 100%; */
+    justify-content: center;
+    align-items: center;
+    background: #1d1c1ca2;
+    color: #fffffe;
+    font-size: 20px;
+    border-radius: 20px;
+    border: 1px white solid;
+    transition-duration: 0.5s;
+}
+
+.appIcon {
+    width: 100%;
+    height: 100%;
+}
+
+.appTitle {
+    width: 100%;
+    height: 50%;
+    padding: 0px 0px;
+    margin: 0px 0px;
+    font-size: 2.5em;
+    border-color: #008CBA;
+}
+
+.holder {
+    display: flex;
+    flex-direction: column;
+    padding: 10px auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.headline {
+    justify-content: center;
+    text-align: center;
+    height: 100%;
+}
+
+.title {
+    text-align: center;
+    display: flex;
+    font-size: 1.5em;
+    background-blend-mode: hard-light;
+    font-variant: small-caps;
+}
+
+.entry {
+    display: none;
+    background: #ffffff28;
+    width: 95%;
+    border-radius: 15px;
+    justify-content: center;
+    align-items: center;
+    border: 1px white solid;
+    transition-duration: 0.5s;
+}
+
+#entryHolder {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.flexItem {
+    font-size: 1em;
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+    margin: 0 auto;
+}
+
+#date {}
+
+#tempContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+#temp {
+    font-variant: small-caps;
+}
+
+#tempIcon {
+    border: none;
+    width: 200px;
+    height: 200px;
+    border-color: 2px solid #008CBA;
+    border-radius: 75px;
+}
+
+#country {
+    display: flex;
+    flex-direction: column;
+}
+
+#countryFlag {
+    border: none;
+    width: 200px;
+    height: 200px;
+    border-radius: 75px;
+    overflow: "hidden";
+    border-radius: "50%";
+    margin: "3%";
+    text-align: center;
+}
+
+#city {
+    font-variant: small-caps;
+}
+
+#content {}
+
+
+/*  Basic Styling To Override Default For Basic HTML Elements */
+
+button {
+    display: flex;
+    margin: 12px auto;
+    padding: 16px 32px;
+    justify-content: center;
+    font-size: 18px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    background-color: white;
+    color: black;
+    border: 2px solid #008CBA;
+    border-radius: 15px;
+    text-shadow: none;
+}
+
+button:hover {
+    background-color: #008CBA;
+    border-radius: 5px;
+    color: white;
+}
+
+input {
+    align-self: center;
+    height: 50px;
+    width: 95%;
+    background-color: white;
+    font-size: 25px;
+    border-radius: 50x;
+    text-shadow: none;
+}
+
+textarea {
+    height: 100px;
+    width: 95%;
+    background: white;
+    font-size: 25px;
+    border: none;
+    border-radius: 10px;
+    text-shadow: none;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+    border: 3px solid;
+    border-color: #008CBA;
+    transition-duration: 0.5s;
+}
+
+@media (max-width: 800px) {
+    #entryHolder {
+        flex-direction: column;
+    }
+    .appIcon {
+        width: 75%;
+        height: 45%;
+    }
+    .appTitle {
+        font-size: 2em;
+    }
+}

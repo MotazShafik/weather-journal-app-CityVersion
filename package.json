@@ -1,0 +1,18 @@
+{
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.1",
+    "nodemon": "^2.0.14"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "name": "weather-journal-app",
+  "description": "## Overview This project requires you to create an asynchronous web app that uses Web API and user data to dynamically update the UI.",
+  "version": "1.0.0",
+  "main": "server.js",
+  "author": "Motaz Shafik",
+  "license": "ISC"
+}

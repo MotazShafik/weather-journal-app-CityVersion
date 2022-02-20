@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Weather Journal</title>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@268&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/app.js" type="text/javascript" defer></script>
+</head>
+
+<body>
+    <div class="loading">
+        <div class='loadingText1'>
+            <span> Weather Journal App </span>
+        </div>
+        <div>
+            <img class="loadingIconLogo" src="https://openweathermap.org/img/wn/02d@4x.png">
+        </div>
+        <div class='loadingText2'>
+            <span> Loading... </span>
+        </div>
+    </div>
+    </div>
+
+    <div id="app">
+        <div class="holder headline">
+            <div>
+                <img class="appIcon" src="https://openweathermap.org/img/wn/02d@4x.png">
+            </div>
+            <div class="appTitle">
+                <span> Weather Journal App </span>
+            </div>
+        </div>
+
+        <div>
+            <div class="holder zip">
+                <!-- <label for="zip">Enter Zipcode here</label> -->
+                <input type="text" id="cityname" placeholder="Enter your city name here" cols="150" required>
+            </div>
+            <div class="holder feel">
+                <!-- <label for="feelings">How are you feeling today?</label> -->
+                <textarea class="myInput" id="feelings" placeholder="Enter your feelings here" rows="9" cols="150"></textarea>
+            </div>
+            <div>
+                <button id="generate"> Generate </button>
+            </div>
+        </div>
+
+        <div class="holder entry">
+            <div class="title">Most Recent Entry</div>
+            <div id="entryHolder">
+                <div class='flexItem'>
+                    <div id="date" class='flexItem'></div>
+                </div>
+                <div class='flexItem'>
+                    <div id="country" class='flexItem'>
+                        <div id="city" class=' flexItem '></div>
+                        <img id='countryFlag'>
+                    </div>
+
+                    <div id="tempContainer" class='flexItem '>
+                        <div id="temp" class='flexItem'></div>
+                        <img id="tempIcon">
+                    </div>
+                    <div id="content" class='flexItem'></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>
